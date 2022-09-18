@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "WellcomeM";
+}
+
+<h2>Wellcome Mali</h2>
+<h2>Wellcome to user page</h2>
+<h2>Wellcom @Session["Username"].ToString()</h2>
+<Button class="btn-default">@Html.ActionLink("Logout", "Index")</Button>
+@*<Button class="btn-danger">@Html.ActionLink("Return", "Index") </Button>*@
+<a href="@Url.Action("Create","JobM")"><Button type="button" class="btn-primary">Add Data</Button></a>
+<script type="text/javascript">
+    Function preventBack(){
+        window.History.forward();
+    }
+    Set timeout("preventBack", 0);
+    window.onunload = function () {
+        null;
+    }
+
+</script>
+
